@@ -1,0 +1,17 @@
+from rply import LexerGenerator
+
+lg = LexerGenerator()
+lg.ignore(r"\s+")
+lg.add('IF', r"if")
+lg.add("ELSE", r"else")
+lg.add("PRINT", r"print")
+lg.add("LPAREN", r"\(")
+lg.add("RPAREN", r"\)")
+lg.add("LBRACE", r"\{")
+lg.add("RBRACE", r"\}")
+lg.add("EQUAL", r"=")
+lg.add("GREATER_EQUAL", r">=")
+lg.add("SEMICOLON", r";")
+lg.add("NUMBER", r"\d+")
+lg.add("NAME", r"[a-zA-z_][a-zA-Z0-9_]*")
+lexer = lg.build()
